@@ -27,7 +27,8 @@
   (when (derived-mode-p 'org-mode)  ;; Check if we are in org-mode
     (save-excursion
       (goto-char (point-min))  ;; Go to the beginning of the buffer
-      (if (re-search-forward "^#\\+auto-export-pandoc: \\(.*\\)$" nil t)
-          (funcall (intern (concat "org-pandoc-export-" (match-string 1))))))))
+      (while (re-search-forward "^#\\+auto-export-pandoc: \\(.*\\)$" nil t)
+        (let ((export-format (match-string 1)))
+          (funcall (intern (concat "org-pandoc-export-" export-format))))))))
 
 (add-hook 'after-save-hook 'org-auto-export-pandoc)
