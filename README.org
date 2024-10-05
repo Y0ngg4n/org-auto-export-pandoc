@@ -1,8 +1,3 @@
-#+PROPERTY: header-args :tangle 01.py
-#+auto_tangle: t
-#+tangle: t
-#+auto-export-pandoc: to-markdown
-
 * org-auto-export-pandoc
 
 This package provides the functionality to automatically export with org-pandoc-export-* modes.
