@@ -13,7 +13,6 @@ It will look for the following tag:
 #+end_src
 
 You can add the tag muliple times to export to multiple formats:
-E.g.:
 #+begin_src elisp
 #+auto-export-pandoc: to-markdown
 #+auto-export-pandoc: to-latex-pdf

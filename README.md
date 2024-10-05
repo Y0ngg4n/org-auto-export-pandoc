@@ -23,7 +23,7 @@ file. It will look for the following tag:
 #+auto-export-pandoc: to-markdown
 ```
 
-You can add the tag muliple times to export to multiple formats: E.g.:
+You can add the tag muliple times to export to multiple formats:
 
 ``` elisp
 #+auto-export-pandoc: to-markdown
