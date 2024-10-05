@@ -21,13 +21,13 @@
 (require ox-pandoc)
 
 
-(defun auto-pandoc-export ()
-  "Check for a #+auto_pandoc tag in the buffer and run the corresponding Pandoc export function."
+
+(defun org-auto-export-pandoc ()
   (interactive)
   (when (derived-mode-p 'org-mode)  ;; Check if we are in org-mode
     (save-excursion
       (goto-char (point-min))  ;; Go to the beginning of the buffer
-      (if (re-search-forward "^#\\+auto_export_pandoc: \\(.*\\)$" nil t)
+      (if (re-search-forward "^#\\+auto-export-pandoc: \\(.*\\)$" nil t)
           (funcall (intern (concat "org-pandoc-export-" (match-string 1))))))))
 
-(add-hook :when org-mode 'after-save-hook 'auto-pandoc-export)
+(add-hook 'after-save-hook 'org-auto-export-pandoc)
