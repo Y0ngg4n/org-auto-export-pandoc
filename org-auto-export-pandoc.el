@@ -18,17 +18,33 @@
 
 ;; Package-Requires: (ox-pandoc)
 
+
+;;; Commentary:
+;; This package provides the functionality to automatically export with org-pandoc-export-* modes. It adds a hook to exute it when you save the file. It will look for the following tag:
+;; #+auto-export-pandoc: to-markdown
+;; You can add the tag muliple times to export to multiple formats:
+;; #+auto-export-pandoc: to-markdown
+;; #+auto-export-pandoc: to-latex-pdf
+;; #+auto-export-pandoc: to-html5
+
 (require ox-pandoc)
 
 
 
+;;; Code:
+
 (defun org-auto-export-pandoc ()
+  "Exports to the predefined formats in your \"org-mode\" file via pandoc."
   (interactive)
   (when (derived-mode-p 'org-mode)  ;; Check if we are in org-mode
     (save-excursion
       (goto-char (point-min))  ;; Go to the beginning of the buffer
       (while (re-search-forward "^#\\+auto-export-pandoc: \\(.*\\)$" nil t)
-        (let ((export-format (match-string 1)))
+        (let ((export-format (match-string 1))) ;;
           (funcall (intern (concat "org-pandoc-export-" export-format))))))))
 
 (add-hook 'after-save-hook 'org-auto-export-pandoc)
+
+(provide 'org-auto-export-pandoc)
+
+;;; org-auto-export-pandoc.el ends here
