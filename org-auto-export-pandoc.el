@@ -7,8 +7,8 @@
 ;; Maintainer: Yonggan <yonggan@obco.pro>
 ;; Created: 05.10.2024
 
-;; Keywords: languages
-;; URL: https://example.com/foo
+;; Keywords: convenience
+;; URL: https://github.com/Y0ngg4n/org-auto-export-pandoc.git
 ;; Version: 1.0.0
 ;; Package-Version: 1.0.0
 ;; This file is not part of GNU Emacs.
