@@ -1,4 +1,4 @@
-;;; org-auto-pandoc.el --- Support for the Foo programming language  -*- lexical-binding: t; -*-
+;;; org-auto-export-pandoc.el --- Support for the Foo programming language  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2010-2021 Yonggan also known as y0ngg4n
 
@@ -9,25 +9,26 @@
 
 ;; Keywords: languages
 ;; URL: https://example.com/foo
-
+;; Version: 1.0.0
+;; Package-Version: 1.0.0
 ;; This file is not part of GNU Emacs.
 
 ;; This file is free software…
-…
 ;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
-;; Package-Requires: (ox-pandoc)
+;; Package-Requires: (ox-pandoc (emacs "24.1"))
 
 
 ;;; Commentary:
-;; This package provides the functionality to automatically export with org-pandoc-export-* modes. It adds a hook to exute it when you save the file. It will look for the following tag:
+;; This package provides the functionality to automatically export with org-pandoc-export-* modes.
+;; It adds a hook to exute it when you save the file. It will look for the following tag:
 ;; #+auto-export-pandoc: to-markdown
 ;; You can add the tag muliple times to export to multiple formats:
 ;; #+auto-export-pandoc: to-markdown
 ;; #+auto-export-pandoc: to-latex-pdf
 ;; #+auto-export-pandoc: to-html5
 
-(require ox-pandoc)
+(require 'ox-pandoc)
 
 
 
