@@ -1,4 +1,4 @@
-;;; org-auto-export-pandoc.el --- Support for the Foo programming language  -*- lexical-binding: t; -*-
+;;; org-auto-export-pandoc.el --- Add org auto export with pandoc  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2010-2021 Yonggan also known as y0ngg4n
 
