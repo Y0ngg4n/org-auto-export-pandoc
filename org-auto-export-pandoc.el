@@ -11,6 +11,7 @@
 ;; URL: https://github.com/Y0ngg4n/org-auto-export-pandoc.git
 ;; Version: 1.0.0
 ;; Package-Version: 1.0.0
+;; SPDX-License-Identifier: GPL-3.0-only
 ;; This file is not part of GNU Emacs.
 
 ;; This file is free software…
