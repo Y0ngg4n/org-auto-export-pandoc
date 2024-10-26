@@ -45,7 +45,6 @@
         (let ((export-format (match-string 1))) ;;
           (funcall (intern (concat "org-pandoc-export-" export-format))))))))
 
-(add-hook 'after-save-hook 'org-auto-export-pandoc)
 
 (provide 'org-auto-export-pandoc)
 
