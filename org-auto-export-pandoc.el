@@ -14,15 +14,15 @@
 ;; SPDX-License-Identifier: GPL-3.0-only
 ;; This file is not part of GNU Emacs.
 
-;; This file is free software…
-;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
-
-;; Package-Requires: (ox-pandoc (emacs "24.1"))
-
+;; Package-Requires: ((ox-pandoc "2.0") (emacs "24.1"))
 
 ;;; Commentary:
-;; This package provides the functionality to automatically export with org-pandoc-export-* modes.
-;; It adds a hook to exute it when you save the file. It will look for the following tag:
+;; This package provides the functionality to automatically export
+;; with org-pandoc-export-* modes.
+;; Add this hook if you want to execute it on save:
+;; (add-hook 'after-save-hook 'org-auto-export-pandoc)
+;; It adds a hook to exute it when you save the file. It will look
+;; for the following tag:
 ;; #+auto-export-pandoc: to-markdown
 ;; You can add the tag muliple times to export to multiple formats:
 ;; #+auto-export-pandoc: to-markdown

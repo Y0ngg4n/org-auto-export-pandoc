@@ -14,4 +14,9 @@ You can add the tag muliple times to export to multiple formats:
 #+auto-export-pandoc: to-html5
  #+end_src
 
- You should also be able set pandoc export parameters as described here: https://github.com/kawabata/ox-pandoc
+You can use this to execute it on save:
+#+begin_#+begin_src elisp
+(add-hook 'after-save-hook 'org-auto-export-pandoc)
+#+end_src
+
+You should also be able set pandoc export parameters as described here: https://github.com/kawabata/ox-pandoc
